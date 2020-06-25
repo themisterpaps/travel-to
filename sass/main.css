@@ -1,0 +1,29 @@
+*, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.conteiner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [full-start] 1fr [grid-start] ([col-start] 12.2rem [col-end])[12] [grid-end] 1fr;
+      grid-template-columns: [full-start] 1fr [grid-start] repeat(12, [col-start] 12.2rem [col-end]) [grid-end] 1fr;
+  -ms-grid-rows: 80vh;
+      grid-template-rows: 80vh;
+}
+
+body {
+  font-family: "Open Sans", "Source Sans pro", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #2d3338;
+}
+/*# sourceMappingURL=main.css.map */
