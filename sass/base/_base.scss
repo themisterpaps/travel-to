@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: inherit;
+    text-decoration: none;
 }
 
 html{
@@ -13,6 +14,6 @@ html{
 .conteiner{
     display: grid;
 
-    grid-template-columns: [full-start] 1fr [grid-start] repeat( 12, [col-start] 12.2rem [col-end]) [grid-end] 1fr;
-    grid-template-rows: 80vh;
+    grid-template-columns: [full-start] 1fr [grid-start] repeat( 12, [col-start] minmax(9.3333rem, 1fr) [col-end]) [grid-end] 1fr;
+    grid-template-rows: 95vh min-content;
 }

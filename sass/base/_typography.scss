@@ -1,6 +1,32 @@
+
+%family{
+    font-family: $font-heading;
+     
+}
+p{
+    line-height: 1.2;
+    font-size: 1.12rem;
+}
 body{
     font-family: $font-body;
-    font-weight:400;
+    font-weight:300;
     line-height: 1; 
     color: $color-grey-dark-2;
+    
+}
+.heading-1{
+    font-size: 5.4rem;
+    line-height: 1.1;
+    font-weight: 800;
+     @extend %family;
+}
+.heading-2{
+    @extend %family;
+    font-weight: 700;
+   color: $color-grey-dark-1;
+   font-size: 1.75rem
+}
+.heading-3{
+    @extend %family;
+    font-weight: 500;
 }

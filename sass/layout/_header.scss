@@ -1,21 +1,66 @@
 .header{
+    grid-column: 1/-1;
+ 
+    padding: 2rem 8rem;
+    padding-top: 0;
+    background: linear-gradient(-170deg, transparent, rgba(#000000, .6)) ,url(../img/bg-1.png) ;
+    background-size: 100%;
+    background-position: bottom right;
+    display: grid;
+     grid-template-columns: 1.4fr 1fr;
+     grid-template-rows: 1.2fr repeat(4, max-content) 1fr;
+     grid-row-gap: 2rem;
+     grid-auto-flow: row;
+     align-content: center;
+     justify-items: flex-start;
+     color: $color-grey-light-1;
     &__logo{
-        
+      width: 11rem;
+      padding-top: 2rem;
+      align-self: flex-start;
     }
     &__item{
-
+        
     }
     &__nav{
-
+         justify-self: flex-end;
+         align-self: stretch;
+         
         &-list{
-
+            list-style: none;
+            display: flex;
+            
         }
-        &-item{
+        &-item:link, &-item:visited{
+            color: $color-secondary;
+            font-size: 1.4rem;
+            padding: 1.25rem;
+            padding-top: 2.5rem;
+            text-transform: uppercase;
+            transform-origin: top;
+            transition: all .5s , color .3s .2s;
+            background:linear-gradient(to bottom,  $color-primary 5%, $color-primary 5%,transparent 5%, transparent 100%  ); 
+            background-size: 101%;
+             
 
+            
+            &:not(:last-child){
+                margin-right: 1.5rem;
+            }
         }
+        &-item:active, &-item:hover{
+            background-size: 2000%;  
+            color: $color-grey-light-1;   
+        }
+        
     }
     &__text{
-
+        grid-column: 1/2;
+        width: 80%;
+    }
+    &__btn{ 
+        margin-top: 2vw;
+        grid-column: 1/2;
     }
 
 }

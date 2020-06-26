@@ -1,0 +1,35 @@
+.cities{
+    grid-column: grid-start / full-end;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+   
+    &__text{
+        align-self: center;
+        margin-right: 1rem;
+        &>p{
+            padding: 1rem 0;
+        }
+    }
+    &__item{
+        position: relative;
+        transform: translateY(-50%);
+        z-index: 1000;
+        // box-shadow:  0 2rem 6rem rgba($color: #000000, $alpha: .3);
+    }
+    &__name{
+    position: absolute;
+    margin:1rem;
+    color: $color-grey-light-2;
+    text-transform: uppercase;
+    }
+    &__img{
+         
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    &__btn{
+        justify-content: right;
+    }
+}

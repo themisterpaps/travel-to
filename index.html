@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +8,80 @@
     <link rel="stylesheet" href="sass/main.css">
     <title>Document</title>
 </head>
+
 <body class="conteiner">
     <header class="header">
-        <img src="img/logo.png" alt="Logo Mark" class="logo">
+        <img src="img/logo.png" alt="Logo Mark" class="header__logo">
         <nav class="header__nav">
             <ul class="header__nav-list">
-               <a href="#" class="header__nav-item">
-                   <li>Home</li>
-               </a>
-               <a href="#" class="header__nav-item">
-                   <li>About Us</li>
-               </a>
-               <a href="#" class="header__nav-item">
-                   <li>City Guide</li>
-               </a>
-               <a href="#" class="header__nav-item">
-                   <li>Blogs</li>
-               </a>
-               <a href="#" class="header__nav-item">
-                   <li>Contact Us</li>
-               </a>
+                <a href="#" class="header__nav-item">
+                    <li>Home</li>
+                </a>
+                <a href="#" class="header__nav-item">
+                    <li>About Us</li>
+                </a>
+                <a href="#" class="header__nav-item">
+                    <li>City Guide</li>
+                </a>
+                <a href="#" class="header__nav-item">
+                    <li>Blogs</li>
+                </a>
+                <a href="#" class="header__nav-item">
+                    <li>Contact Us</li>
+                </a>
             </ul>
         </nav>
         <h1 class="heading-1">Explore Endless Options and opportunities</h1>
-        <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dignissimos praesentium quo, alias maiores inventore minus magnam blanditiis necessitatibus facilis.</p>
-        <button class="btn btn--rounded btn--white">
+        <p class="header__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dignissimos praesentium
+            quo, alias maiores inventore minus magnam blanditiis necessitatibus facilis.</p>
+        <button class="btn btn--rounded btn--white header__btn">
             Explore
-             <svg class="btn__icon btn__icon--1">
-               <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-            </svg>
             <svg class="btn__icon btn__icon--1">
                 <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-             </svg>
+            </svg>
+            <svg class="btn__icon btn__icon--2">
+                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+            </svg>
         </button>
     </header>
+    <section class="cities">
+        <div class="cities__text">
+            <h2 class="heading-2">Architecto, debitis!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi molestias nisi dicta dolore libero
+                necessitatibus!</p>
+            <div class="btn__back-go cities__btn">
+                <button class="btn btn__next-arrow">
+                    <svg class="btn__next-arrow__icon">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                </button>
+                <button class="btn btn__next-arrow">
+                    <svg class="btn__next-arrow__icon">
+                        <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+
+
+        </div>
+        <div class="cities__item">
+            <h3 class="heading-3 cities__name">Dubai</h3>
+            <img src="img/city-1.png" alt="Dubai City" class="cities__img">
+        </div>
+        <div class="cities__item">
+            <h3 class="heading-3 cities__name">Abu dabhi</h3>
+            <img src="img/city-2.png" alt="Dubai City" class="cities__img">
+        </div>
+        <div class="cities__item">
+            <h3 class="heading-3 cities__name">Ras Al Khaimah</h3>
+            <img src="img/city-3.png" alt="Dubai City" class="cities__img">
+        </div>
+        <div class="cities__item">
+            <h3 class="heading-3 cities__name">Sahara</h3>
+            <img src="img/city-4.png" alt="Dubai City" class="cities__img">
+        </div>
+        
+    </section>
 </body>
+
 </html>

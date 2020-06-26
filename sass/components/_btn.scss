@@ -1,17 +1,72 @@
 .btn{
+    border: none;
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    &__back-go{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(min-content, max-content));
+        grid-column-gap:  .8%;
+    }
+   &__next-arrow{
+    background-color: $color-secondary;
+    color: $color-grey-light-1;
+    padding: 1rem;
+
         &__icon{
+            fill: currentColor; 
+            height: 1.75rem;
+            width: 1.75rem;
+        }
+   }
 
+        &__icon{
+            height: 1.75rem;
+            width: 1.75rem;
+            transform: translateY(3%);
             &--1{
-
+                fill: currentColor;
+                opacity: .5;
+                 margin-right:-9%; 
             }
             &--2{
-
+                fill: currentColor;
             }
         }
         &--white{
+            transition: all .3s;
+            color: $color-grey-dark-2;
+            background-color: $color-grey-light-2;
+            border: 2pt solid transparent;
+            &:hover,&:active{
+                color:$color-primary-light;  
+                background-color: transparent;
+                border: 2pt solid currentColor;
+            
+            }
+        }
+        &--white-2{
+            transition: all .2s;
+            color: $color-grey-dark-2;
+            background-color: $color-grey-light-2;
+            &:hover,&:active{
+                color:$color-primary-light;  
+                background-color: $color-secondary;
+            }
+        }
+        &--brown{
+            transition: all .2s;
+            color: $color-grey-light-1;
+            background-color: $color-primary;
+            &:hover,&:active{
 
+            }
         }
         &--rounded{
-
+            border-radius: 100px;
         }
+       
 }

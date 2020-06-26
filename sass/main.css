@@ -3,6 +3,7 @@
   margin: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  text-decoration: none;
 }
 
 html {
@@ -14,16 +15,261 @@ html {
 .conteiner {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: [full-start] 1fr [grid-start] ([col-start] 12.2rem [col-end])[12] [grid-end] 1fr;
-      grid-template-columns: [full-start] 1fr [grid-start] repeat(12, [col-start] 12.2rem [col-end]) [grid-end] 1fr;
-  -ms-grid-rows: 80vh;
-      grid-template-rows: 80vh;
+  -ms-grid-columns: [full-start] 1fr [grid-start] ([col-start] minmax(9.3333rem, 1fr) [col-end])[12] [grid-end] 1fr;
+      grid-template-columns: [full-start] 1fr [grid-start] repeat(12, [col-start] minmax(9.3333rem, 1fr) [col-end]) [grid-end] 1fr;
+  -ms-grid-rows: 95vh min-content;
+      grid-template-rows: 95vh -webkit-min-content;
+      grid-template-rows: 95vh min-content;
+}
+
+.heading-1, .heading-2, .heading-3 {
+  font-family: "Open Sans", "Source Sans pro", sans-serif;
+}
+
+p {
+  line-height: 1.2;
+  font-size: 1.12rem;
 }
 
 body {
-  font-family: "Open Sans", "Source Sans pro", sans-serif;
-  font-weight: 400;
+  font-family: "Poppins", "Source Sans pro", sans-serif;
+  font-weight: 300;
   line-height: 1;
   color: #2d3338;
+}
+
+.heading-1 {
+  font-size: 5.4rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.heading-2 {
+  font-weight: 700;
+  color: #707070;
+  font-size: 1.75rem;
+}
+
+.heading-3 {
+  font-weight: 500;
+}
+
+.btn {
+  border: none;
+  padding: 1.25rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.btn__back-go {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(min-content, max-content))[2];
+      grid-template-columns: repeat(2, minmax(-webkit-min-content, -webkit-max-content));
+      grid-template-columns: repeat(2, minmax(min-content, max-content));
+  grid-column-gap: .8%;
+}
+
+.btn__next-arrow {
+  background-color: #2c4458;
+  color: #f6f6f6;
+  padding: 1rem;
+}
+
+.btn__next-arrow__icon {
+  fill: currentColor;
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+.btn__icon {
+  height: 1.75rem;
+  width: 1.75rem;
+  -webkit-transform: translateY(3%);
+          transform: translateY(3%);
+}
+
+.btn__icon--1 {
+  fill: currentColor;
+  opacity: .5;
+  margin-right: -9%;
+}
+
+.btn__icon--2 {
+  fill: currentColor;
+}
+
+.btn--white {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: #2d3338;
+  background-color: #eee;
+  border: 2pt solid transparent;
+}
+
+.btn--white:hover, .btn--white:active {
+  color: #efd6ac;
+  background-color: transparent;
+  border: 2pt solid currentColor;
+}
+
+.btn--white-2 {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  color: #2d3338;
+  background-color: #eee;
+}
+
+.btn--white-2:hover, .btn--white-2:active {
+  color: #efd6ac;
+  background-color: #2c4458;
+}
+
+.btn--brown {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  color: #f6f6f6;
+  background-color: #c49d48;
+}
+
+.btn--rounded {
+  border-radius: 100px;
+}
+
+.cities {
+  grid-column: grid-start / full-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.cities__text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 1rem;
+}
+
+.cities__text > p {
+  padding: 1rem 0;
+}
+
+.cities__item {
+  position: relative;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.cities__name {
+  position: absolute;
+  margin: 1rem;
+  color: #eee;
+  text-transform: uppercase;
+}
+
+.cities__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.cities__btn {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.header {
+  grid-column: 1/-1;
+  padding: 2rem 8rem;
+  padding-top: 0;
+  background: linear-gradient(-170deg, transparent, rgba(0, 0, 0, 0.6)), url(../temp/bg-2.png);
+  background-size: 100%;
+  background-position: bottom right;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.4fr 1fr;
+      grid-template-columns: 1.4fr 1fr;
+  -ms-grid-rows: 1.2fr (max-content)[4] 1fr;
+      grid-template-rows: 1.2fr repeat(4, -webkit-max-content) 1fr;
+      grid-template-rows: 1.2fr repeat(4, max-content) 1fr;
+  grid-row-gap: 2rem;
+  grid-auto-flow: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: flex-start;
+  color: #f6f6f6;
+}
+
+.header__logo {
+  width: 11rem;
+  padding-top: 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.header__nav {
+  justify-self: flex-end;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.header__nav-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__nav-item:link, .header__nav-item:visited {
+  color: #2c4458;
+  font-size: 1.4rem;
+  padding: 1.25rem;
+  padding-top: 2.5rem;
+  text-transform: uppercase;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: all .5s , color .3s .2s;
+  transition: all .5s , color .3s .2s;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #c49d48), color-stop(5%, #c49d48), color-stop(5%, transparent), to(transparent));
+  background: linear-gradient(to bottom, #c49d48 5%, #c49d48 5%, transparent 5%, transparent 100%);
+  background-size: 101%;
+}
+
+.header__nav-item:link:not(:last-child), .header__nav-item:visited:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.header__nav-item:active, .header__nav-item:hover {
+  background-size: 2000%;
+  color: #f6f6f6;
+}
+
+.header__text {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  width: 80%;
+}
+
+.header__btn {
+  margin-top: 2vw;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
 }
 /*# sourceMappingURL=main.css.map */
