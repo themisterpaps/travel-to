@@ -4,7 +4,7 @@
      
 }
 p{
-    line-height: 1.2;
+    line-height: 1.5;
     font-size: 1.12rem;
 }
 body{
@@ -18,13 +18,15 @@ body{
     font-size: 5.4rem;
     line-height: 1.1;
     font-weight: 800;
+    
      @extend %family;
 }
 .heading-2{
     @extend %family;
     font-weight: 700;
    color: $color-grey-dark-1;
-   font-size: 1.75rem
+   font-size: 1.75rem;
+   margin-bottom: 1rem;
 }
 .heading-3{
     @extend %family;

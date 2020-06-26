@@ -9,19 +9,25 @@
     &__back-go{
         display: grid;
         grid-template-columns: repeat(2, minmax(min-content, max-content));
-        grid-column-gap:  .8%;
+        grid-column-gap: .5rem;
     }
-   &__next-arrow{
-    background-color: $color-secondary;
-    color: $color-grey-light-1;
-    padding: 1rem;
-
-        &__icon{
-            fill: currentColor; 
-            height: 1.75rem;
-            width: 1.75rem;
+        &__next-arrow{
+        
+            padding: 1rem;
+            &--blue{
+                background-color: $color-secondary;
+                color: $color-grey-light-1;
+            }
+            &--brown{
+                background-color: $color-primary;
+                color: $color-grey-light-1;
+            }
+                &__icon{
+                    fill: currentColor; 
+                    height: 1.75rem;
+                    width: 1.75rem;
+                }
         }
-   }
 
         &__icon{
             height: 1.75rem;
@@ -48,25 +54,14 @@
             
             }
         }
-        &--white-2{
-            transition: all .2s;
-            color: $color-grey-dark-2;
-            background-color: $color-grey-light-2;
-            &:hover,&:active{
-                color:$color-primary-light;  
-                background-color: $color-secondary;
-            }
-        }
-        &--brown{
-            transition: all .2s;
-            color: $color-grey-light-1;
-            background-color: $color-primary;
-            &:hover,&:active{
-
-            }
-        }
-        &--rounded{
-            border-radius: 100px;
-        }
+        // &--white-2{
+        //     transition: all .2s;
+        //     color: $color-grey-dark-2;
+        //     background-color: $color-grey-light-2;
+        //     &:hover,&:active{
+        //         color:$color-primary-light;  
+        //         background-color: $color-secondary;
+        //     }
+        // }
        
 }
