@@ -24,11 +24,18 @@ body{
 .heading-2{
     @extend %family;
     font-weight: 700;
-   color: $color-grey-dark-1;
-   font-size: 1.75rem;
+    color: $color-grey-dark-2;
+   font-size: 2rem;
    margin-bottom: 1rem;
 }
 .heading-3{
     @extend %family;
     font-weight: 500;
 }
+.heading-4{
+    font-weight: 700;
+   color: $color-grey-dark-2;
+   font-size: 1.3rem;
+   margin-bottom: 1rem;
+}
+

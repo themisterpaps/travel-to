@@ -1,3 +1,6 @@
+%transitions{
+    transition: all 1s ease;
+}
 .btn{
     border: none;
     padding: 1.25rem 2rem;
@@ -11,22 +14,38 @@
         grid-template-columns: repeat(2, minmax(min-content, max-content));
         grid-column-gap: .5rem;
     }
-        &__next-arrow{
-        
+        &__next-arrow{        
             padding: 1rem;
-            &--blue{
+
+            &--blue, &--blue:link,&--blue:visited {
                 background-color: $color-secondary;
                 color: $color-grey-light-1;
+                @include transitions;
+                }
+            &--blue:hover,&--blue:active{
+                background-color: $color-primary;
+                color: $color-grey-light-1; 
+                  
             }
+
+            &--brown:active,
+            &--brown:visited, 
             &--brown{
                 background-color: $color-primary;
                 color: $color-grey-light-1;
-            }
-                &__icon{
-                    fill: currentColor; 
-                    height: 1.75rem;
-                    width: 1.75rem;
+                @include transitions;
                 }
+            &--brown:hover,
+             &--brown:active{
+                background-color: $color-secondary;
+                color: $color-grey-light-1;  
+            }
+
+            &__icon{
+                fill: currentColor; 
+                height: 1.75rem;
+                width: 1.75rem;
+            }
         }
 
         &__icon{
@@ -36,7 +55,7 @@
             &--1{
                 fill: currentColor;
                 opacity: .5;
-                 margin-right:-9%; 
+                margin-right:-9%; 
             }
             &--2{
                 fill: currentColor;

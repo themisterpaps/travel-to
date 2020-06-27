@@ -13,8 +13,8 @@
     }
     &__item{
         position: relative;
-        transform: translateY(-50%);
-        z-index: 1000;
+        margin-top: -50%;
+        
         // box-shadow: $shadow;
     }
     &__name{
@@ -32,5 +32,6 @@
     }
     &__btn{
         justify-content: right;
+        z-index: 1000;
     }
 }
