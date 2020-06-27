@@ -1,0 +1,42 @@
+.newsletter{
+    grid-column: 1/-1;
+    height: 20rem;
+    margin-top: 10rem ;
+    padding: 5rem;
+    background: linear-gradient(rgba($color-secondary,.4),rgba($color-secondary,.4)), url("../img/gallery-5.jpeg");
+    background-size: cover;
+    background-position: 50% 70%;
+    color: $color-grey-light-1;
+    display: grid;
+    justify-content: center;
+    &__pargraph{
+      
+    }
+    &__form{
+        display: flex;
+        align-items: center;
+    }
+    &__input{
+        margin-right: 3rem;
+        width: 30vw;
+        padding: 1rem 2rem;
+        border: none;
+        border: 3px solid transparent;
+        @include transitions;
+        &:hover, &:active{
+            border: 3px solid $color-primary-light;
+            background: rgba($color-grey-light-1, $alpha: .9    )
+            
+        }
+        &:focus{
+          outline: none;  
+        }
+        
+    }
+    &__heading{
+        color: white;
+    }
+    &__btn{
+
+    }
+}

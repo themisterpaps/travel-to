@@ -634,6 +634,55 @@ body {
   border-bottom-right-radius: 0px;
 }
 
+.newsletter {
+  grid-column: 1/-1;
+  height: 20rem;
+  margin-top: 10rem;
+  padding: 5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 68, 88, 0.4)), to(rgba(44, 68, 88, 0.4))), url("../img/gallery-5.jpeg");
+  background: linear-gradient(rgba(44, 68, 88, 0.4), rgba(44, 68, 88, 0.4)), url("../img/gallery-5.jpeg");
+  background-size: cover;
+  background-position: 50% 70%;
+  color: #f6f6f6;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newsletter__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newsletter__input {
+  margin-right: 3rem;
+  width: 30vw;
+  padding: 1rem 2rem;
+  border: none;
+  border: 3px solid transparent;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+
+.newsletter__input:hover, .newsletter__input:active {
+  border: 3px solid #efd6ac;
+  background: rgba(246, 246, 246, 0.9);
+}
+
+.newsletter__input:focus {
+  outline: none;
+}
+
+.newsletter__heading {
+  color: white;
+}
+
 .header {
   grid-column: 1/-1;
   padding: 2rem 8rem;
