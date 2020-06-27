@@ -7,3 +7,9 @@
     object-fit: cover;
     display: block;
 }
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    right:50%;
+    transform: translate(40%,-50%)
+}

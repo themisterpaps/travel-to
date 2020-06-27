@@ -14,6 +14,6 @@ html{
 .conteiner{
     display: grid;
     grid-template-columns: [full-start] 1fr [grid-start] repeat( 12, [col-start] minmax(9.3333rem, 1fr) [col-end]) [grid-end] 1fr;
-    grid-template-rows: 95vh min-content minmax(80vh, min-content) min-content;
+    grid-template-rows: 95vh min-content minmax(80vh, min-content) min-content min-content;
     background-color: $color-grey-light-1;
 }
