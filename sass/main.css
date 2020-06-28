@@ -640,8 +640,8 @@ body {
   height: 30rem;
   margin-top: 10rem;
   padding: 5rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 68, 88, 0.5)), to(rgba(44, 68, 88, 0.5))), url("../img/gallery-5.jpeg");
-  background: linear-gradient(rgba(44, 68, 88, 0.5), rgba(44, 68, 88, 0.5)), url("../img/gallery-5.jpeg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 68, 88, 0.5)), to(rgba(44, 68, 88, 0.5))), url("../img/gallery-5.jpg");
+  background: linear-gradient(rgba(44, 68, 88, 0.5), rgba(44, 68, 88, 0.5)), url("../img/gallery-5.jpg");
   background-size: cover;
   background-position: 50% 80%;
   color: #f6f6f6;
@@ -792,7 +792,7 @@ body {
   grid-column: 1/-1;
   padding: 2rem 8rem;
   padding-top: 0;
-  background: linear-gradient(-170deg, transparent, rgba(0, 0, 0, 0.6)), url(../img/bg-1.png);
+  background: linear-gradient(-170deg, transparent, rgba(0, 0, 0, 0.6)), url(../img/bg-1.jpg);
   background-size: 100%;
   background-position: bottom right;
   display: -ms-grid;
