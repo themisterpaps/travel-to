@@ -1,7 +1,7 @@
 .videos{
     grid-column: full-start /full-end;
     
-    margin: 10rem 0;
+    margin-bottom: 15rem;
     height: 12vw;
     display: grid;
     grid-column-gap: 1rem;
@@ -46,7 +46,7 @@
             height: 5rem;
             width: 5rem;      
             @include absolute-center;
-            transition: opacity .25s ease-out;
+            transition: opacity .5s ease-out;
             
         }
         &:first-child {

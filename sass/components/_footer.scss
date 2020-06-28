@@ -1,0 +1,81 @@
+.footer{
+    grid-column: grid-start / grid-end; 
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 5rem 0 10rem 0;
+    grid-column-gap: 8rem;
+    font-size: 1.5rem;
+    & *{
+        color: $color-grey-dark-1;
+    }
+    &__links {
+        
+    }
+    &__list{
+
+    }
+    &__item{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        &:not(:last-child){
+            margin-bottom: 1.25rem;
+        }
+        & li:hover{
+            color: $color-primary; 
+        }
+       
+        &::before{
+            content: url("../img/ios-arrow-right.svg");
+            display: inline-block;
+            height: 1.2rem;
+            width: 1.2rem; 
+            opacity: .5;  
+        }
+         
+    }
+    &__logo{
+        height: 4rem;
+        opacity: .5;
+        
+    }
+    &__heading-4{
+         font-size: 1.75rem;
+         margin-bottom: 1.75rem;
+
+    }
+    &__logo-info{
+        grid-column: 1/span 2;
+        align-self: center;
+    }
+    &__text{
+    }
+    
+}
+.contact-us{
+    grid-column: 5/span 2;
+    &__pargraph{
+        margin-bottom: 1rem;
+    }
+  
+}
+.legal{
+    grid-column: 1/-1;
+    background-color: $color-secondary;
+    display: flex;
+    padding: 1rem 5rem;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-grey-light-1;
+    & a{
+       color: inherit;  
+       &:hover{
+        color: $color-primary;
+    } 
+    }
+    &__policy a{
+        &:not(:last-child){
+            margin-right: 2rem;
+        } 
+    }
+}

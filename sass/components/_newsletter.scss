@@ -1,16 +1,17 @@
 .newsletter{
     grid-column: 1/-1;
-    height: 20rem;
+    height: 30rem;
     margin-top: 10rem ;
     padding: 5rem;
-    background: linear-gradient(rgba($color-secondary,.4),rgba($color-secondary,.4)), url("../img/gallery-5.jpeg");
+    background: linear-gradient(rgba($color-secondary,.5),rgba($color-secondary,.5)), url("../img/gallery-5.jpeg");
     background-size: cover;
-    background-position: 50% 70%;
+    background-position: 50% 80%;
     color: $color-grey-light-1;
     display: grid;
     justify-content: center;
+    align-content: center;
     &__pargraph{
-      
+      margin-bottom: 1rem;
     }
     &__form{
         display: flex;
@@ -18,7 +19,7 @@
     }
     &__input{
         margin-right: 3rem;
-        width: 30vw;
+        width: 35vw;
         padding: 1rem 2rem;
         border: none;
         border: 3px solid transparent;
