@@ -1,8 +1,17 @@
 .gallery{
     margin-top: 10rem;
-    margin-bottom: 15rem;
+    margin-bottom: 12rem;
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 7rem;  
+    }
+    
+   
     grid-column: grid-start / grid-end;
     text-align: center;
+    @media only screen and (max-width: $bp-big) {
+        padding: 0 2rem;
+        margin-bottom: 10rem;
+    }
     &__grid{
         height: 50vw;
         display: grid;
@@ -18,6 +27,9 @@
          margin: 0 auto;
          margin-bottom: 10rem;
          line-height: 2;
+         @media only screen and (max-width: $bp-big) {
+            width: 50%;
+        }
     } 
     &__item{
       

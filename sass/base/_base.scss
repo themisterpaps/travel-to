@@ -4,16 +4,41 @@
     box-sizing: inherit;
     text-decoration: none;
 }
-
+$bp-largest:1200px;
+$bp-large:1000px;
+$bp-big:900px;
+$bp-medium:800px;
+$bp-small:700px;
+$bp-smallest:500px;
+$bp-thin:400px;
 html{
     box-sizing: border-box;
     font-size: 62.5%;
-
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;  
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 40%;
+    }
+    @media only screen and (max-width: $bp-thin) {
+        font-size: 35%;
+    }
 }
 
 .conteiner{
     display: grid;
-    grid-template-columns: [full-start] 1fr [grid-start] repeat( 12, [col-start] minmax(9.3333rem, 1fr) [col-end]) [grid-end] 1fr;
-    grid-template-rows: 95vh min-content minmax(80vh, min-content) min-content min-content;
+    grid-template-columns: [full-start] 1fr [grid-start] repeat( 12, [col-start] minmax(min-content, 9.3333rem,) [col-end]) [grid-end] 1fr [full-end] ;
+    grid-template-rows: 95vh min-content minmax(min-content, 50rem) min-content min-content;
     background-color: $color-grey-light-1;
+    @media only screen and (max-width: $bp-big) {
+        grid-template-columns: [full-start grid-start] repeat( 12, [col-start] minmax(min-content, 9.3333rem) [col-end]) [grid-end full-end] ;
+    }
+    @media only screen and (max-width: $bp-medium) {
+             overflow-x: hidden;
+    }
+    
+    @media only screen and (max-width: $bp-thin) {
+        grid-template-rows: 98vh min-content minmax(min-content, 50rem) min-content min-content;
+
+    }
 }

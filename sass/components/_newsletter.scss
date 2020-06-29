@@ -10,6 +10,12 @@
     display: grid;
     justify-content: center;
     align-content: center;
+    @media only screen and (max-width: $bp-largest) {
+        margin-top:0 ;
+    }
+    @media only screen and (max-width: $bp-big){
+
+    }
     &__pargraph{
       margin-bottom: 1rem;
     }
@@ -20,6 +26,9 @@
     &__input{
         margin-right: 3rem;
         width: 35vw;
+        @media only screen and (max-width: $bp-big){
+            width: 50vw;
+        }
         padding: 1rem 2rem;
         border: none;
         border: 3px solid transparent;

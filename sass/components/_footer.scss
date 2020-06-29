@@ -1,10 +1,19 @@
 .footer{
     grid-column: grid-start / grid-end; 
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     margin: 5rem 0 10rem 0;
-    grid-column-gap: 8rem;
+    grid-column-gap: 5rem;
+    grid-row-gap: 5rem;
     font-size: 1.5rem;
+    @media only screen and (max-width: $bp-largest) {
+        grid-column: full-start/ full-end;
+        padding: 2rem ;
+         
+    }
+    // @media only screen and (max-width: $bp-big) {
+    //     grid-template-columns: repeat(4, 1fr);
+    // }
     & *{
         color: $color-grey-dark-1;
     }
@@ -45,7 +54,7 @@
 
     }
     &__logo-info{
-        grid-column: 1/span 2;
+         
         align-self: center;
     }
     &__text{
@@ -53,7 +62,8 @@
     
 }
 .contact-us{
-    grid-column: 5/span 2;
+     
+    
     &__pargraph{
         margin-bottom: 1rem;
     }

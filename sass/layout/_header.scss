@@ -4,16 +4,38 @@
     padding: 2rem 8rem;
     padding-top: 0;
     background: linear-gradient(-170deg, transparent, rgba(#000000, .6)) ,url(../img/bg-1.jpg) ;
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: bottom right;
-    display: grid;
+
+     display: grid;
      grid-template-columns: 1.4fr 1fr;
      grid-template-rows: 1.2fr repeat(4, max-content) 1fr;
      grid-row-gap: 2rem;
-     grid-auto-flow: row;
      align-content: center;
      justify-items: flex-start;
      color: $color-grey-light-1;
+     @media only screen and (max-width: $bp-big) {
+        padding-left: 2rem;
+        padding-top: 0;
+     }
+
+     @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 1fr;  
+        background-position: 70%;
+     }
+     .heading-1{
+        @media only screen and (max-width: $bp-medium) {
+            display: block;
+            max-width: 80%;
+           
+        }
+        @media only screen and (max-width: $bp-smallest) {
+        font-size: 6rem;
+        line-height: 1.2
+        }
+     }
+    
     &__logo{
       width: 11rem;
       padding-top: 2rem;
@@ -25,7 +47,9 @@
     &__nav{
          justify-self: flex-end;
          align-self: stretch;
-         
+         @media only screen and (max-width: $bp-medium) {
+             display: none;
+         }
         &-list{
             list-style: none;
             display: flex;

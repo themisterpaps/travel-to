@@ -2,26 +2,59 @@
     display: grid;
     grid-column: 1/-1;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8,5vw);
+    grid-template-rows:  repeat(8,5vw); 
+     background-color: $color-grey-light-2;
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 40vh repeat(7,5vw);
+        grid-row-gap: 3rem;
+        grid-column-gap: 2rem;
+        padding: 0;
+    }
+    & > *:not(:first-child){
+        padding: 0 2rem; 
+        padding-bottom: 4rem;
+    }
     justify-items: center;
     align-items: center;
-    background-color: $color-grey-light-2;
+  
     margin-top: 15rem ;
+    @media only screen and (max-width: $bp-small) {
+        margin-top:0 ;  
+        padding: 0 1rem; 
+        
+    }
     &__description{
         &-headings{
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            @media only screen and (max-width: $bp-small) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
         &-1{
+            @media only screen and (max-width: $bp-small) {
+                text-align: justify;
+                grid-column: 2/11;
+                grid-row: 2/4; 
+                align-items: flex-start;
+            }
             grid-column: 8/12;
             grid-row: 1/5;
+            
         }
         &-2{
             align-self: flex-start;
             grid-column: 10 / -1;
             grid-row: 5/-1;
-            padding: 3rem;
+            
+            @media only screen and (max-width: $bp-small) {
+            padding: 0 2rem;
+            grid-column: 8 / -1;
+            grid-row: 4/-1;
+            }
             & h4{
                 display: flex;
                 align-items: center;
@@ -43,7 +76,15 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        box-shadow: $shadow;
+        
+        
+        @media only screen and (max-width: $bp-small) {
+            box-shadow: none;
+            grid-column: 2/8 ;
+            grid-row: 4/-1; 
+            border-radius: 20px !important;
+           
+        }
     }
     &__description{
           
@@ -52,9 +93,21 @@
     display: block;
     grid-column: 1/ span 6;
     grid-row: 1/-1;
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 2/ -2;  
+        grid-row: 1/2;
+        border-radius: 10px;
+        
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        margin-bottom: 5rem;
+        border-radius: 10px;
+    }
+
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
     }
     & .btn__icon{
         transform:translateY(-5%);
@@ -62,7 +115,12 @@
         opacity: .5;
     }
     &__btn{
-        margin-top: 10rem
+        margin-top: 20%;
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 5%;
+        }
+        
+
     }
 }
 
