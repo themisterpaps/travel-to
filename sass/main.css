@@ -65,7 +65,7 @@ html {
 }
 
 .heading-1, .heading-2, .heading-3 {
-  font-family: "Open Sans", "Source Sans pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 p {
@@ -74,7 +74,7 @@ p {
 }
 
 body {
-  font-family: "Poppins", "Source Sans pro", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   line-height: 1;
   color: #2d3338;
@@ -94,7 +94,7 @@ body {
 }
 
 .heading-3 {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .heading-4 {
